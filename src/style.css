@@ -18,49 +18,33 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 1rem;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  border: dotted #3178c6aa;
+  padding: 0.5rem;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
+input {
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
+
+input:hover {
+  filter: drop-shadow(0 0 1em #3178c6aa);
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+select {
+  background-color: #3179c61c;
 }
 
 button {
@@ -82,6 +66,20 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#course-list div {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  background-color: #747bff29;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -92,5 +90,11 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
   }
 }
