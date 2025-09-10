@@ -61,6 +61,7 @@ function displayCourses(): void {
 loadCourses();
 displayCourses();
 
+// Stop page reload on form submit and handle adding course
 document.getElementById("course-form")?.addEventListener("submit", (e: Event) => {
   e.preventDefault();
 
